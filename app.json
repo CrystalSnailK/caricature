@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/find/find",
+    "pages/recommend/recommend",
+    "pages/me/me",
+    "pages/detail/detail",
+    "pages/watch/watch",
+    "pages/more/more",
+    "pages/more1/more1",
+    "pages/more2/more2",
+    "pages/search/search",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#FFDF00",
+    "navigationBarTitleText": "快看漫画",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/find/find",
+      "text": "发现",
+      "iconPath": "images/jewelry.png",
+      "selectedIconPath": "images/jewelry (1).png"
+    },
+    {
+      "pagePath": "pages/recommend/recommend",
+      "text": "推荐",
+      "iconPath": "images/all.png",
+      "selectedIconPath": "images/all (1).png"
+    },
+    {
+      "pagePath": "pages/me/me",
+      "text": "我的",
+      "iconPath": "images/account.png",
+      "selectedIconPath": "images/account (1).png"
+    }
+  ],
+  "selectedColor": "#FFDF00"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,66 @@
+/* pages/more2/more2.wxss */
+page{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.list_jx{
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 140px;
+}
+
+
+
+.list_jx_img{
+  border-radius: 5px;
+  width: 105px;
+  height:133px;
+  margin-right: 20px;
+}
+.jx_list{
+  width: 210px;
+}
+.list_name{
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 550;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color:rgb(34, 34, 34);
+  margin-bottom: 8px;
+}
+.list_tags{
+background-color: #e9e9e9;
+border-radius: 30px;
+width: fit-content;
+padding: 4.5px;
+font-size: 9px;
+margin-bottom: 8px;
+color: #424242;
+}
+.fav_img{
+height: 14px;
+width: 14px;
+margin-bottom: 0px;
+margin-right: 7px;
+/* background-color: rgb(255, 255, 255); */
+}
+.list_likes{
+line-height: 19px;
+margin-bottom: 6px;
+/* background-color: rgb(255, 255, 255); */
+}
+.list_des{
+  overflow: hidden;
+  height: 50px;
+  font-size: 10px;
+  color: #585858;
+  word-spacing:5px;
+}

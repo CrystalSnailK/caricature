@@ -1,0 +1,14 @@
+<!--pages/more/more.wxml-->
+<!--全网都在看合集-->
+<view class="list_qw" wx:for="{{ quanw}}" wx:key="index" bindtap="toDetail" data-id="{{item.id}}">
+<view class="img">
+<image class="list_qw_img" src="{{ item.vertical_image_url}}"></image>
+</view>
+<view class="qw_list">
+<view class="list_name">{{ item.title}}</view>
+<view class="list_tags"> {{item.tags}}</view>
+<view class="list_likes"> <image class="fav_img" src="/images/favorites.png"></image>{{item.likes_count}}</view>
+<view class="list_des">{{ item.description}}</view>
+</view>
+</view>
+

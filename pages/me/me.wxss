@@ -1,0 +1,133 @@
+/* pages/me/me.wxss */
+page{
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  /* 怪异盒模型 在不破坏整体布局的 取完整 */
+  box-sizing: border-box;
+}
+.box{
+  background-color: #fff;
+  height: 200rpx;
+  width: 100%;
+  margin-top: 30px;
+  /* 子绝父相 */
+  position: relative;
+  /* 阴影 */
+  box-shadow: 5px 10px 5px #666;
+}
+.img{
+  height: 180rpx;
+  width: 180rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 38%;
+  top: -45%;
+}
+.login{
+  color: #fff;
+  background-color: #FFDF00;
+  width: 120px !important;
+  position: absolute;
+  left: 34%;
+  top: 53%;
+}
+.nickName{
+  position: absolute;
+  left: 41%;
+  top: 60%;
+  font-size: 20px;
+  font-weight: 900;
+}
+.container{
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  /* 子绝父相 */
+  /* position: relative; */
+  /* 阴影 */
+  box-shadow: 5px 10px 5px #666;
+}
+.container_title{
+  width: 100%;
+  height: 80rpx;
+  margin-top: -100px;
+  display: flex;
+}
+.like{
+  text-align: center;
+  border-right: #666 3px solid;
+  width: 49%;
+  line-height: 80rpx;
+  font-size: 18px;
+  
+}
+.recode{
+  text-align: center;
+  width: 49%;
+  line-height: 80rpx;
+  font-size: 18px;
+  
+}
+.like_active{
+  text-align: center;
+  border-right: #666 3px solid;
+  width: 49%;
+  line-height: 80rpx;
+  font-size: 18px;
+  color: #FFDF00;
+}
+.recode_active{
+  text-align: center;
+  width: 49%;
+  line-height: 80rpx;
+  font-size: 18px;
+  color: #FFDF00;
+}
+.like_container{
+  width: 100%;
+  /* height: 300%; */
+
+  overflow-y:scroll;
+position: absolute;
+top:-10%;
+   /* background-color: #666; */
+}
+swiper{
+width: 100%;
+height: 500px;
+margin-bottom:-90px ;
+}
+.item{
+  width: 45%;
+  height: 250px;
+  float: left ;
+  margin-left:3% ;
+  margin-top: 15%;
+}
+.item_img{
+  width: 100%;
+  height: 80%;
+}
+.item_name{
+  width: 100%;
+  height: 8%;
+  overflow: hidden;
+}
+.img_like{
+  float: left ;
+  width: 15%;
+  height: 8%;
+margin-right:5% ;
+margin-top: 1%;
+
+}
+.like_count{
+  color: #666;
+  float: left ;
+  width: 80%;
+  height: 8%;
+}

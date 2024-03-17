@@ -1,0 +1,236 @@
+/* pages/find/find.wxss */
+page{
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.search_wrapper{
+  border-radius: 20px;
+  background-color:#fcfcfc;
+  width: 100%;
+  height: 30px;
+}
+.search{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.search_img
+{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+.search_ipt{
+  margin-top: 5px;
+}
+swiper{
+  height: 200px;
+  margin-top: 10px;
+}
+swiper image{
+  width: 100%;
+  height: 190px;
+  border-radius: 10px;
+}
+.list_wrapper{
+  width: 100%;
+  background-color: #fcfcfc;
+  border-radius: 5px;
+  margin-top:5px;
+}
+.list_title{
+  display: flex;/*弹性布局*/
+  justify-content: space-between;
+}
+.top-line {
+  display: flex;/*弹性布局*/
+  justify-content: space-between;
+  width: 100%;
+  line-height: 10px;
+  margin-right: 30px;
+}
+
+.list_title_button{  
+  font-size: 19px;
+  color: rgb(134, 131, 121);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 17px;
+  margin-right:17px ;
+  padding: 10px;
+  font-weight: 900;
+}
+/*过度效果,就是你点击的时候,当前字体会有什么改变 */
+.active {                         
+  transform: scale(1.45);
+  transform: all 2s;
+  color: rgb(48, 39, 1);
+  border-bottom: 2.5px solid  hsl(52, 77%, 57%);
+}
+.list_title_text{
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 900;
+}
+.list_title_more{
+  margin: 10px;
+  font-size: 18px;
+}
+/*人气榜*/
+.list_rq{
+  margin-left:4%;
+  width: 28%;
+  height: 100px;
+  flex-wrap: wrap;     /*允许换行*/
+  display: inline-block;
+  background-color: blanchedalmond;
+}
+.list_rq_img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.text{
+  width:100%;
+}
+.list_name{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color:rgb(65, 63, 63);
+  font-weight: 900;
+}
+.list_tags{
+  border-radius: 30px;
+  width: fit-content;
+  padding: 4px;
+  font-size: 10.5px;
+  margin-bottom: 3px;
+  color: #000000;
+  overflow: hidden;
+  width: 90px;
+  font-weight: 800;
+  }
+.list_change{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  color: rgb(73, 73, 73);
+}
+/*新作榜*/
+.list_xz{
+  width: 28%;
+  height: 100px;
+  margin-left:4%;
+  flex-wrap: wrap;     /*允许换行*/
+  display: inline-block;
+}
+.list_xz_img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+/*飙升榜*/
+.list_bs{
+  margin-left:4% ;
+  width: 28%;
+  height: 100px;
+  flex-wrap: wrap;     /*允许换行*/
+  display: inline-block;
+}
+.list_bs_img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+/*全网热搜*/
+.qwlist{
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+ background-image: url(https://tn1-f2.kkmh.com/image/210508/EDDbuMPSB.webp-w750.jpg) ;
+  background-size: 100% 100%;
+  color:#000000;
+  /*opacity: 0.8*/
+}
+/*背景图片透明度设计*/
+.ChartCanvas{
+	background:rgba(255, 255, 255, 0.575);/*关键点*/
+}
+
+.qw_list{
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.list_qw{
+ 
+  width: 100px;
+  height: 120px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.list_qw_img{
+  width: 100px;
+  height: 120px;
+  border-radius: 10px;
+}
+/*真香漫Pick区！*/
+.zxlist{
+  width: 100%;
+  height:200px;
+  background-color: #ffffff;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-image: url(https://tn1-f2.kkmh.com/image/220708/nrfXmajmh.webp-w750.jpg);
+  color: #000000;
+}
+
+.zx_list{
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.list_zx{
+  width: 100px;
+  height: 120px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.list_zx_img{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+
+/*精选漫画！人气飙升！*/
+.jxlist{
+  width: 100%;
+  height: 200px;
+  background-color: #fcfcfc;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-image: url(https://tn1-f2.kkmh.com/image/230109/ciaTzhFWU.webp-w750.jpg);
+  color: #000000de;
+}
+
+.jx_list{
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.list_jx{
+  width: 100px;
+  height: 120px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.list_jx_img{
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+}

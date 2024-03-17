@@ -1,0 +1,27 @@
+<!--pages/detail/detail.wxml-->
+<!-- <text>pages/detail/detail.wxml</text> -->
+<view class="container">
+<image class="title_img"  src="{{all.cover_image_url}}"></image>
+<view class="shoucang" >
+  <view bindtap="love" data-likeid="{{id}}"class="shoucang-text"  >收藏一下
+  </view>
+  <image class="shoucang_img"  src="{{dian==1?'/images/favorites.png':'/images/favorites (1).png'}}"></image>
+  
+  
+</view>
+<view class="title">
+<view class="title_name">{{all.title}}
+({{all.update_status}})</view>
+
+<view class="title_de"  style="font-size: 12px;color: #555555;">{{all.user.nickname}}</view>
+<view class="title_de">{{all.description}}</view>
+</view>
+
+<view class="item" wx:for="{{all.comics}}" wx:key="index" bindtap="toWatch" data-index="{{index}}" data-id="{{id}}">
+<image class="item_img" src="{{item.cover_image_url}}"></image>
+<view class="item_name">{{item.title}}</view>
+</view>
+
+</view>
+
+

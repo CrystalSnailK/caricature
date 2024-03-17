@@ -1,0 +1,39 @@
+<!--pages/me/me.wxml-->
+<view class="box">
+<image src="{{ userInfo.avatarUrl ?userInfo.avatarUrl : '/images/R.png' }}" class="img"></image>
+<button class="login" bindtap="getUser" hidden="{{ userInfo.nickName }}">点击登录</button>
+<view class="nickName" hidden="{{ !userInfo.nickName }}">{{ userInfo.nickName }}</view>
+</view>
+
+<view class="container" hidden="{{!userInfo.nickName}}">
+<view class="container_title">
+<view class="{{currentactive==0?'like_active':'like'}}" bindtap="tap" data-cut="0">我的收藏</view>
+<view class="{{currentactive==1?'recode_active':'recode'}}" bindtap="tap" data-cut="1">游览记录</view>
+</view>
+
+<swiper bindchange="change" current="{{currentactive}}">
+<swiper-item class="like_container">
+<view class="item" wx:for="{{likeId}}" wx:key="index" hidden="{{!likeId[index]}}" bindtap="toDetail" data-id="{{likeId[index]}}">
+  <image class="item_img" src="{{like[index]}}"></image>
+<view class="item_name">{{likeName[index]}}</view>
+<block>
+<image class="img_like" src="/images/good-filling (1).png"></image>
+<view class="like_count">{{likeCount[index]}}</view>
+</block>
+</view>
+  </swiper-item>
+
+
+  <swiper-item class="like_container"  >
+  <view class="item" wx:for="{{recodeId}}" wx:key="index"bindtap="toDetail" data-id="{{recodeId[index]}}" hidden="{{!recodeId[index]}}">
+  <image class="item_img" src="{{recode[index]}}"></image>
+<view class="item_name">{{recodeName[index]}}</view>
+<block>
+<image class="img_like" src="/images/good-filling (1).png"></image>
+<view class="like_count">{{recodeCount[index]}}</view>
+</block>
+</view>
+  </swiper-item>
+</swiper>
+
+</view>

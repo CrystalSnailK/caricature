@@ -1,0 +1,13 @@
+<!--pages/watch/watch.wxml-->
+<!-- <text>pages/watch/watch.wxml</text> -->
+<view class="body">
+<view class="watch_img" wx:for="{{watch.images}}" wx:key="index">
+<image src="{{item}}"></image>
+</view>
+</view>
+<view class="choose">
+<view class="left" bindtap="toLast" >《 </view>
+<view class="title" >{{watch.title}}</view>
+<view class="right"bindtap="toNext"> 》 </view>
+</view>
+

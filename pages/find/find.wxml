@@ -1,0 +1,149 @@
+<!--pages/find/find.wxml-->
+<!--搜索-->
+<view class="search_wrapper" bindtap="toSearch">
+<view class="search">
+<image class="search_img" src="/images/search.png"></image>
+<input type="text" placeholder="搜索漫画" class="search_ipt"/>
+</view>
+</view>
+<!--轮播图区域-->
+<view>
+<swiper autoplay indicator-dots interval="3000" circular indicator-active-color="#ffff">
+  <swiper-item>
+    <image src="https://tn1-f2.kkmh.com/image/220802/YGCSunWeN.webp-w750.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://tn1-f2.kkmh.com/image/230413/sZloEZWWC.webp-w750.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://tn1-f2.kkmh.com/image/210910/wewqfVDzT.webp-w750.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://tn1-f2.kkmh.com/image/230630/BpBqMzHUj.webp-w750.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://tn1-f2.kkmh.com/image/211029/YhBUxYqrR.webp-w750.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://tn1-f2.kkmh.com/image/221128/AlvqpKxlf.webp-w750.jpg"></image>
+  </swiper-item> 
+<swiper-item>
+    <image src="https://tn1-f2.kkmh.com/image/220719/lUTwoAnkv.webp-w750.jpg"></image>
+  </swiper-item> 
+<swiper-item>
+    <image src="https://tn1-f2.kkmh.com/image/230331/lOZUVNOxy.webp-w750.jpg">白日梦我</image>
+  </swiper-item> 
+<swiper-item>
+    <image src="https://tn1-f2.kkmh.com/image/201215/aAJfeImdX.webp-w750.jpg"></image>
+  </swiper-item> 
+  <swiper-item>
+    <image src="https://tn1-f2.kkmh.com/image/220314/WnKtzcRTh.webp-w750.jpg"></image>
+  </swiper-item> 
+</swiper>
+</view>
+
+<!--人气榜 新作榜 飙升榜-->
+<view class="list_wrapper">
+<view class="top-line">
+<view class="list_title_button {{TopIndex == 0 ? 'active':''}}"  data-index="0" 
+bindtap='changstyle'>人气榜</view>
+<view class="list_title_button {{TopIndex == 1 ? 'active':''}}"  data-index="1" 
+bindtap='changstyle'>新作榜</view>
+<view class="list_title_button {{TopIndex == 2 ? 'active':''}}"  data-index="2" 
+bindtap='changstyle'>飙升榜</view>
+<!--如果当前view的TopIndex等于当前要显示的view的Index 就触发过度效果-->
+</view>
+
+<!--人气榜-->
+<view wx:if="{{TopIndex == 0}}"> 
+<view class="list_rq" wx:for="{{ renqi }}" wx:key="index" hidden="{{!item.square_image_url}}" bindtap="toDetail" data-id="{{item.id}}">
+<view class="list_rq_img">
+<image class="list_rq_img" src="{{ item.square_image_url}}" ></image>
+<view class="list_name">{{ item.title }}</view>
+<view class="list_change">{{item.rank_change_value}}</view>
+</view>
+</view>
+</view>
+<!--新作榜-->
+<view  wx:if="{{TopIndex == 1}}">
+  <view class="list_xz" wx:for="{{ xinz }}" wx:key="index" hidden="{{!item.square_image_url}}" bindtap="toDetail" data-id="{{item.id}}">
+<view class="list_xz_img">
+<image class="list_xz_img" src="{{ item.square_image_url}}" ></image>
+<view class="list_name">{{ item.title }}</view>
+<view class="list_change">{{item.rank_change_value}}</view>
+</view>
+</view>
+</view>
+<!--飙升榜-->
+<view  wx:if="{{TopIndex == 2}}">
+  <view class="list_bs" wx:for="{{biaos}}" wx:key="index" hidden="{{!item.square_image_url}}" bindtap="toDetail" data-id="{{item.id}}">
+<view class="list_bs_img">
+<image class="list_bs_img" src="{{ item.square_image_url}}" ></image>
+<view class="list_name">{{ item.title }}</view>
+<view class="list_change">{{item.rank_change_value}}</view>
+</view>
+</view>
+</view>
+
+</view>
+<!--全网都在看合集-->
+<view class="qwlist">
+<view class="ChartCanvas">
+<view class="list_title">
+<view class="list_title_text">猜你喜欢！全网热搜！</view>
+<view class="list_title_more" bindtap="toMore">更多></view>
+</view>
+<scroll-view scroll-x>
+<view class="qw_list">
+<view class="list_qw" wx:for="{{ quanw}}" wx:key="index" bindtap="toDetail" data-id="{{item.id}}" hidden="{{!item.square_image_url}}">
+<image class="list_qw_img" src="{{ item.square_image_url}}"></image>
+<view class="text">
+<view class="list_name">{{ item.title}}</view>
+<view class="list_tags"> {{item.tags}}</view>
+</view>
+</view>
+</view>
+</scroll-view>
+</view>
+</view>
+
+<!--真香漫Pick区！-->
+<view class="zxlist">
+  <view class="ChartCanvas">
+<view class="list_title">
+<view class="list_title_text">真香漫Pick区！</view>
+<view class="list_title_more" bindtap="toMore1">更多></view>
+</view>
+<scroll-view scroll-x>
+<view class="zx_list">
+<view class="list_zx" wx:for="{{ zhenx}}" wx:key="index" bindtap="toDetail" data-id="{{item.id}}" hidden="{{!item.square_image_url}}">
+<image class="list_zx_img" src="{{ item.square_image_url}}"></image>
+<view class="text">
+<view class="list_name">{{ item.title}}</view>
+<view class="list_tags"> {{item.tags}}</view>
+</view>
+</view>
+</view>
+</scroll-view>
+</view>
+</view>
+<!--精选漫画！人气飙升！-->
+<view class="jxlist">
+<view class="ChartCanvas">
+<view class="list_title">
+<view class="list_title_text">精选漫画！人气飙升！</view>
+<view class="list_title_more" bindtap="toMore2" >更多></view>
+</view>
+<scroll-view scroll-x>
+<view class="jx_list">
+<view class="list_jx" wx:for="{{jingx}}" wx:key="index" bindtap="toDetail" data-id="{{item.id}}" hidden="{{!item.square_image_url}}">
+<image class="list_jx_img" src="{{ item.square_image_url}}"></image>
+<view class="text">
+<view class="list_name">{{ item.title}}</view>
+<view class="list_tags"> {{item.tags}}</view>
+</view>
+</view>
+</view>
+</scroll-view>
+</view>
+</view>

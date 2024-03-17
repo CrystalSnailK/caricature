@@ -1,0 +1,15 @@
+<!--pages/more2/more2.wxml-->
+<!--精选漫画！人气飙升！-->
+<view class="jxlist">
+<view class="list_jx" wx:for="{{jingx}}" wx:key="index" bindtap="toDetail" data-id="{{item.id}}">
+<view class="img">
+<image class="list_jx_img" src="{{ item.vertical_image_url}}"></image>
+</view>
+<view class="jx_list">
+  <view class="list_name">{{ item.title}}</view>
+<view class="list_tags"> {{item.tags}}</view>
+<view class="list_likes"> <image class="fav_img" src="/images/favorites.png"></image>{{item.likes_count}}</view>
+<view class="list_des">{{ item.description}}</view>
+</view>
+</view>
+</view>
